@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="Ahmed Rahil, Fahad Qutaiba and Amina Aldarwish">
+        <meta name="description" content="Sharjah Astronomical Observatory Archive containing observations of extra-terrestial objects recorded over the span of a decade since 2015.
+        The first of its kind in the MENA region."><!--Add the desc here-->
+        <meta name="keywords" content="Sharjah Astronomical Archive, Sharjah Observatory, Sharjah Academy, Astronomy, Space, Sciences, Technology, Space, astronomy, Sharjah Center, مركز الشارقة, أكاديمية الشارقة, فضاء, فلك
+            فضاء، فلك، تكنولوجيا، علوم، كيوبسات، شارقة،
+            space, astronomy, sciences, technology
+            sharjah space center
+            مركز الشارقة للفضاء
+            أكاديمية الشارقة للفضاء
+            sharjah space academy">
+        <meta property="robots" content="index, follow">
+        <meta property="og:title" content="Sharjah Astronomical Observatory Archive">
+        <meta property="og:image" content=""> <!--Has to be filled in once the site is published-->
+        <meta property="og:description" content="Explore a decade's worth of astronomical observations from the Sharjah Astronomical Observatory">
+        <meta property="og:url" content="https://archive.sharjah.ae">
+        <meta property="og:type" content="website">
+        <title>SAO Archive</title>
+        <link rel="icon" href="images/SAASST-BB.png" type="image/png"><!--Favicon goes here-->
+        <link rel="stylesheet" href="styles/IndexStyles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+        <script src="scripts/IndexScripts.js" defer></script><!--JS Scripts go here-->
+    </head>
+    <body>
+        <header>
+            <div class="column">
+                <h1 align="center">Sharjah Astronomical Observatory Archive</h1>
+            </div>
+            <nav>
+                <p style="margin:0;display:inline;float:left"><a href="https://www.sharjah.ac.ae/" target="_blank" rel="noopener noreferrer" title="University of Sharjah Homepage"><img src="images/UOS_Logo.svg" alt="University of Sharjah logo" height="70" class="uos-logo"></a></p>
+                <p align="right"><a href="https://www.saasst.ae/" target="_blank" rel="noopener noreferrer" title="SAASST Homepage"><img src="images/SAASST-BB.png" alt="SAASST logo" height="70" class="saasst-logo"></a></p>
+            <nav>
+            <hr></hr>
+        </header>
+        <main>
+            <section id="welcome">
+                <!--Might have to make this more compact-->
+                <p align="center">Welcome to the Sharjah Astronomical Observatory Archive, the first-of-its-kind archive in the MENA region. Added to list of credible and reliable
+                    international observatories by the Minor Planet Center of the International Astronomical Union (IAU) with the code: Sharjah Observatory M47.
+                </p>
+            </section>
+            <!--Data field goes here-->
+            <div id="search"align="center">
+                <form id="observationForm">
+                    <fieldset>
+                    <legend align="center">View an Observation</legend>
+                    <select id="category" name="category">
+                        <option selected disabled>Category</option>
+                        <option value="solar-system">Solar System</option>
+                        <option value="deep-sky">Deep Sky</option>
+                    </select>
+                    <!--If the user chooses deep sky, then DS options should pop up-->
+                    <!--If the user chooses solar system, then SS should pop up-->
+                    <!--Have to populate this dynamically-->
+                    <select id="entity" name="entity" disabled>
+                        <option selected disabled>First Select a Category</option>
+                    </select>
+                    <input type="month" id="month" required>
+                    <div id="name-entity" style="display: none;"></div>
+                    <button class="submission-request"type="submit">Search</button>
+                </fieldset>
+                </form>
+            </div>
+            <div align="center" id="spinner" class="spinner" style="display: none;" aria-hidden="true"></div>
+            <div id="results" style="display: none;">
+                <figcaption>
+                    <!--This is where the results are supposed to go, fetching data from the database-->
+                </figcaption>
+            </div>
+        </main>
+        <aside>
+            <div class="faqs">
+            <h2>Frequently Asked Questions</h2>
+            <details>
+                <summary>How do I use the archive?</summary>
+                <p>Select a category (Deep Sky or Solar System), the subsequent entity if viable alongside a date. Upon clicking the Search button, results will be tabulated for your reference</p>
+            </details>
+            <details>
+                <summary>How do I reference the observations?</summary>
+                <p>Placeholder text</p>
+            </details>
+            <details>
+                <summary>Another question?</summary>
+            </details>
+            </div>
+        </aside>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="contact-box">
+                        <h3>Contact Us</h3>
+                        <a class="email-btn" href="mailto:mtalafha@sharjah.ac.ae?cc=sharjah@saasst.ae" title="Email Us">Email</a>
+                    </div>
+                    <div class="address-box">
+                        <h3>Location</h3>
+                        <address>
+                            <p>Sharjah Academy For Astronomy, Space Sciences and Technology</p>
+                            <p>Sheikh Khalifa Bin Zayed Al Nahyan Rd</p>
+                            <p>Muwailih Commercial, University City</p>
+                        </address>
+                    </div>
+                </div>
+                <small>All the observations shared on this website are property of the Sharjah Academy for Astronomy, Space Sciences & Technology</small>
+            </div>
+        </footer>
+    </body>
+</html>
