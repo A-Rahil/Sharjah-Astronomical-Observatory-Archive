@@ -103,12 +103,37 @@ const results = document.querySelector("#results");
 
 formData.addEventListener("submit", (e) => {
     e.preventDefault(); //Preventing default values from being tabulated
-    spinner.style.display = "block";
     results.style.display = "none";
     //The remainder here should commmunicate with the backend and fetch the results as needed
+    //Lines below are just a template as to how the results would look in a proof-of-concept
+    const validSSCheck = ctgSelector.value === "solar-system" && entityMenu && entityMenu.value !== "Select Entity" && monthField.value;
+    const validDSCheck = ctgSelector.value === "deep-sky" && entityMenu && entityMenu.value !== "Select Entity" && nameEntity.querySelector("select") && nameEntity.querySelector("select").value !== "Select Entity Name";
+    //Checks in place to ensure results do not show without proper field entries
+    if ((validSSCheck) || (validDSCheck)) {
+        spinner.style.display = "block";
+        setTimeout(() => {
+            displayResults();
+            spinner.style.display = "none";
+        }, 1000);
+    }
+    else {
+        results.innerHTML = `<p class="errorText">Please fill all the fields</p>`;
+        results.style.display = "block";
+    }
 });
 
 function displayResults() { //This function will create the results div and show whatever results have been found
     results.innerHTML = ''; 
     //The remainder of the logic would go here once the website is hosted to display the results
+    //This is just a placeholder for demonstration purposes
+    const obsImg = document.createElement("img");
+    obsImg.src = "images/test-img.jpg";
+    obsImg.alt = "Placeholder Text";    //Can add the date of the observation
+    obsImg.className = "observation-img";
+
+    const obsText = document.createElement("p");
+    obsText.textContent = "Placeholder Text";
+    obsText.className = "observation-txt";
+    results.append(obsImg, obsText);
+    results.style.display = "block";
 }
