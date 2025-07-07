@@ -39,8 +39,6 @@ ctgSelector.addEventListener("change", function() {   //Event handler for popula
     const selectedCategory = this.value;
     entityMenu.innerHTML = `<option selected disabled>Select Entity</option>`;
     monthField.style.display = "inline-block";
-    monthField.required = true;
-
     if (nameEntity) {
         nameEntity.innerHTML = "";
         nameEntity.style.display = "none";
