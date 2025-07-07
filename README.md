@@ -43,4 +43,4 @@ This project is a functional frontend prototype for an astronomical observation 
 
 1. Clone repository:
    ```bash
-   git clone https://github.com/your-username/astronomical-archive.git
+   git clone https://github.com/A-Rahil/Sharjah-Astronomical-Observatory-Archive.git
