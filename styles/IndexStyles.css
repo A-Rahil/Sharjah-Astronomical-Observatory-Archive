@@ -15,6 +15,10 @@ body {
     min-height: 100vh;
 }
 
+#welcome {
+    margin: 0px 50px 0px 50px;
+}
+
 h1 {
     color: white;
     margin: 3% 0 -6%;
@@ -119,6 +123,10 @@ footer {
     font-size: 14px; 
 }
 
+footer small {
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
