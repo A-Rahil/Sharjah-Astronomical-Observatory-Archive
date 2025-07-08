@@ -4,13 +4,77 @@ const monthField = document.querySelector("#month");
 const nameEntity = document.querySelector("#name-entity");  //This is the secondary name of each element
 const deepSkyNames = {
     "comets": [
-        {value: "test", text: "Test"},
-    ],  //Names of each element will go here, along with the values
-    "exoplanets": [""],
-    "clusters": [""],
-    "nebulae": [""],
-    "stars": [""],
-    "supernovae": [""],
+        {value: "12-pons-brooks", text: "12 Pons Brooks"},
+        {value: "2023-a3", text: "2023 A3"},
+        {value: "a1", text: "A1"},
+        {value: "c2013-x1", text: "C2013 X1"},
+        {value: "c2022-e3", text: "C2022 E3"},
+        {value: "catalaina", text: "Catalaina"},
+        {value: "swan-25f", text: "SWAN 25F"},
+        {value: "vomet-nishimora", text: "Vomet Nishimora"}
+    ],  
+    "exoplanets": [
+        {value: "hat-p-10b", text: "HAT-P-10B"},
+        {value: "hat-p-25", text: "HAT-P-25"},
+        {value: "hat-p-25b", text: "HAT-P-25b"},
+        {value: "toi-1168-b", text: "TOI 1168 b"},
+        {value: "toi-1168.01", text: "TOI 1168.01"},
+        {value: "toi-3604.01", text: "TOI 3604.01"},
+        {value: "toi-1858.01", text: "TOI-1858.01"},
+        {value: "toi-2431", text: "TOI-2431"},
+        {value: "toi-2431.01", text: "TOI-2431.01"},
+        {value: "tres-3b", text: "Tres-3b"},
+        {value: "wasp-10b", text: "WASP 10b"},
+        {value: "wasp-33b", text: "WASP 33b"},
+        {value: "wasp-52b", text: "WASP-52b"},
+        {value: "xo-1 b", text: "XO-1 b"}
+    ],
+    "clusters": [
+        {value: "m12", text: "M12"},
+        {value: "m13", text: "M13"},
+        {value: "m15", text: "M15"},
+        {value: "m2", text: "M2"},
+        {value: "m20", text: "M20"},
+        {value: "m22", text: "M22"},
+        {value: "m3", text: "M3"},
+        {value: "m35", text: "M35"},
+        {value: "m4", text: "M4"},
+        {value: "m45", text: "M45"},
+        {value: "m51", text: "M51"},
+        {value: "m7", text: "M7"},
+        {value: "m71", text: "M71"},
+        {value: "the-beehive-cluster", text: "The Beehive Cluster"}
+    ],
+    "nebulae": [
+        {value: "bubble-nebula", text: "Bubble Nebula"},
+        {value: "crescent-nebula", text: "Crescent Nebula"},
+        {value: "dumbbell-nebula", text: "Dumbbell Nebula"},
+        {value: "filament-nebula", text: "Filament Nebula"},
+        {value: "gillyfish", text: "Gillyfish"},
+        {value: "heart", text: "Heart"},
+        {value: "horse-head", text: "Horse Head"},
+        {value: "m1", text: "M1"},
+        {value: "m42", text: "M42"},
+        {value: "m57", text: "M57"},
+        {value: "rosita", text: "Rosita"},
+        {value: "the-monkey-head", text: "The Monkey Head"}
+    ],
+    "stars": [ 
+        {value: "ag-lmi", text: "AG LMi"},
+        {value: "dl-cmi", text: "DL CMi"},
+        {value: "ef4", text: "EF4"},
+        {value: "einstein-cross", text: "Einstein Cross"},
+        {value: "m67", text: "M67"},
+        {value: "rr-lyrae", text: "RR Lyrae"},
+        {value: "s-cnc", text: "S Cnc"},
+        {value: "t-coronae-borealis", text: "T Coronae Borealis"},
+        {value: "t-coronae-v", text: "T Coronae Borealis"},
+        {value: "t-crb", text: "T CrB"}
+    ],
+    "supernovae": [
+        {value: "nova-u-sco", text: "Nova U Sco"},
+        {value: "sn-supernova", text: "SN Supernova"}
+    ],
 };
 const categoryOptions = {
     "solar-system": [
@@ -126,11 +190,11 @@ function displayResults() { //This function will create the results div and show
     //This is just a placeholder for demonstration purposes
     const obsImg = document.createElement("img");
     obsImg.src = "images/test-img.jpg";
-    obsImg.alt = "Placeholder Text";    //Can add the date of the observation
+    obsImg.alt = "The Sun - Observed 06/08/2023";    //Can add the date of the observation
     obsImg.className = "observation-img";
 
     const obsText = document.createElement("p");
-    obsText.textContent = "Placeholder Text";
+    obsText.textContent = "The Sun - Observed 23/01/2025";
     obsText.className = "observation-txt";
     results.append(obsImg, obsText);
     results.style.display = "block";
